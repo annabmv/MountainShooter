@@ -7,7 +7,7 @@ class Enemy(Entity):
     def __init__(self, name: str, position: tuple):
         super().__init__(name, position)
         self.shot_delay = ENTITY_SHOT_DELAY[self.name]
-        self.vertical_direction = 1  # 1 for moving down, -1 for moving up
+        self.vertical_direction = -1  # 1 for moving down, -1 for moving up
 
     def move(self):
         if self.name == 'Enemy3':
@@ -18,9 +18,9 @@ class Enemy(Entity):
 
             # Change direction if hitting the screen boundaries
             if self.rect.top <= 0:
-                self.vertical_direction = 1  # Move down
+                self.vertical_direction = 2  # Move down faster
             elif self.rect.bottom >= WIND_HEIGHT:
-                self.vertical_direction = -2  # Move up faster
+                self.vertical_direction = -1  # Move up
 
         else:
             # Default movement for other enemies
