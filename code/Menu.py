@@ -1,4 +1,4 @@
-import pygame
+import pygame.image
 from pygame import Surface, Rect
 from pygame.font import Font
 
