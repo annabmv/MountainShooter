@@ -6,6 +6,7 @@ C_WHITE = (255, 255, 255)
 C_YELLOW = (255, 255, 128)
 C_GREEN = (0, 128, 0)
 C_CYAN = (0, 128, 128)
+C_BLACK = (0, 0, 0)
 
 # E
 EVENT_ENEMY = pygame.USEREVENT + 1
@@ -131,6 +132,14 @@ PLAYER_KEY_SHOOT = {'Player1': pygame.K_RCTRL,
 # S
 SPAWN_TIME = 4000
 
+# T
+TIMEOUT_STEP = 100  # 100ms
+TIMEOUT_LEVEL = 20000  # 20s
+
+# W
+WIND_WIDTH = 576
+WIND_HEIGHT = 324
+
 # S
 SCORE_POS = {'Title': (WIND_WIDTH / 2, 50),
              'EnterName': (WIND_WIDTH / 2, 80),
@@ -147,11 +156,3 @@ SCORE_POS = {'Title': (WIND_WIDTH / 2, 50),
              8: (WIND_WIDTH / 2, 270),
              9: (WIND_WIDTH / 2, 290),
              }
-
-# T
-TIMEOUT_STEP = 100  # 100ms
-TIMEOUT_LEVEL = 20000  # 20s
-
-# W
-WIND_WIDTH = 576
-WIND_HEIGHT = 324
